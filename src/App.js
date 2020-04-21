@@ -43,6 +43,10 @@ export default function App() {
           </Route>
         </Switch>
       </div>
+      <div>
+        <img src="media\ascention.png" alt="Kiwi standing on oval"/>
+
+      </div>
     </Router>
   );
 }
