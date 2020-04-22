@@ -11,28 +11,28 @@
     src: url(media/Beyond.ttf);
    }
 
+@font-face {
+    font-family: Pixel;
+    src: url(media/Pixel.ttf);
+   }
+
 .navbar{
-    font-family: Arial;
+    font-family: Pixel;
 }
 
 nav{
     background: #000000;
     height: 80px;
-    width: 100%;
 }
 
-label.logo{
-    color:#ffffff;
-    font-size: 35px;
-    font-family: Beyond;
-    letter-spacing: 0px;
-    line-height: 80px;
-    padding: 0 100px;
-}
-
-nav ul{
+.navoptions{
     float: right;
-    margin-right: 20PX;
+    margin-right: 5px;
+}
+
+.gamename{
+    float: left;
+    margin-left: 5px;
 }
 
 nav ul li{
@@ -43,13 +43,23 @@ nav ul li{
 
 nav ul li a{
     color: white;
-    font-size: 17px;
-    padding: 7px 13px;
+    font-size: 20px;
+    padding: 0px 13px;
     text-transform: uppercase;
+    transition: 0.5s;
+    margin: 0 5px;
 }
 
-a:hover{
-    color: #ff0000;
+.gamename li a{
+    color: white;
+    font-size: 25px;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.navbars li a:hover{
+    color: goldenrod;
     transition: 0.5s;
 }
 
@@ -67,22 +77,13 @@ a:hover{
     display: none;
 }
 
-/* @media (max-width: 952px) {
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a{
-        font-size: 16px;
-
-    }
-} */
-
-@media (max-width:858px){
+@media (max-width:960px){
     .checkbtn{
         display: block;
     }
-    ul{
+    .navbars{
+        float: left !important;
+        margin: 0;
         position: fixed;
         width: 100%;
         height: 100vh;
@@ -92,17 +93,32 @@ a:hover{
         text-align: center;
         transition: all 0.5s;
     }
+    .navoptions{
+        top: 160px;
+    }
     nav ul li{
         display: block;
     }
     nav ul li a{
         font-size: 20px;
     }
-    #check:checked ~ ul{
+    /* .navoptions li a{
+        font-size: 15px;
+    } */
+    #check:checked ~ .navbars{
         left: 0;
     }
 }
 
+div{
+    width: 100%;
+}
+
 img{
-    width: 200px;
+    width: 50%;
+    margin: 5% 25%;
+}
+
+.light{
+    color: goldenrod !important;
 }
