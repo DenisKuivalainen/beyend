@@ -1,6 +1,6 @@
   
 import React from 'react';
-import logo from './media/ascention.png';
+// import logo from './media/ascention.png';
 
 class Game1 extends React.Component {
     render() {

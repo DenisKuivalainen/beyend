@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import './Navbar.css';
 import Game1 from './game1'
+import Strip from './svgStrip'
 
 const NAVLINK = ["/", "/ascention", "/godlike"]
 
@@ -48,11 +49,9 @@ class App extends React.Component {
           <nav>
             <input type="checkbox" id="check" checked={this.state.chkbx} />
             <label className="checkbtn" onClick={this.chkbxChange}>
-              <svg class={"menubtn " + this.activeMenu()} width="40" height="40" version="1.1">
-                <rect x="0" y="0" width="40" height="10"/>
-                <rect x="0" y="15" width="40" height="10"/>
-                <rect x="0" y="30" width="40" height="10"/>
-              </svg>
+              <Strip class={"menubtn " + this.activeMenu()}
+                w = "32" h = "6"
+              />
             </label>
             
             <ul className="gamename navbars">
