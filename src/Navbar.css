@@ -64,13 +64,20 @@ nav ul li a{
 }
 
 .checkbtn{
-    font-size: 30px;
-    color: white;
+    height: 40px;
+    fill: white;
     float: right;
-    line-height: 80px;
     margin-right: 40px;
+    margin-top: 20px;
     cursor: pointer;
     display: none;
+}
+
+.menubtn{
+    height: 40px;
+    width: 40px;
+    fill: white;
+    transition: 0.5s;
 }
 
 #check{
@@ -94,7 +101,7 @@ nav ul li a{
         transition: all 0.5s;
     }
     .navoptions{
-        top: 160px;
+        top: 180px;
     }
     nav ul li{
         display: block;
@@ -110,15 +117,8 @@ nav ul li a{
     }
 }
 
-div{
-    width: 100%;
-}
-
-img{
-    width: 50%;
-    margin: 5% 25%;
-}
-
 .light{
     color: goldenrod !important;
+    fill: goldenrod !important;
+    transition: 0.5s;
 }

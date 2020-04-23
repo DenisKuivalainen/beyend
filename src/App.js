@@ -8,6 +8,8 @@ import {
 import './Navbar.css';
 import Game1 from './game1'
 
+const NAVLINK = ["/", "/ascention", "/godlike"]
+
 class App extends React.Component {
   constructor (props) {
     super(props);
@@ -30,9 +32,13 @@ class App extends React.Component {
     
   }
 
-  light(path) {
-    if(window.location.pathname === path) {return ("light")}
+  light(linkto){
+    if(window.location.pathname === linkto) {return ("light")}
     else{return}
+  }
+
+  activeMenu() {
+    if(this.state.chkbx) {return ("light")}
   }
 
   render(){
@@ -42,23 +48,29 @@ class App extends React.Component {
           <nav>
             <input type="checkbox" id="check" checked={this.state.chkbx} />
             <label className="checkbtn" onClick={this.chkbxChange}>
-            <i className="fas fa-bars"></i>
+              <svg class={"menubtn " + this.activeMenu()} width="40" height="40" version="1.1">
+                <rect x="0" y="0" width="40" height="10"/>
+                <rect x="0" y="15" width="40" height="10"/>
+                <rect x="0" y="30" width="40" height="10"/>
+              </svg>
             </label>
             
             <ul className="gamename navbars">
               <li>
-                <Link to="/" 
-                className={this.light("/")}
+                <Link to={NAVLINK[1]} 
+                className={this.light(NAVLINK[0]) + " " + this.light(NAVLINK[1])}
                 onClick={this.clicked}>Ascention</Link>
               </li>              
             </ul>
 
             <ul className="navoptions navbars">
               <li>
-                <Link to="/music" onClick={this.clicked}>music</Link>
+                <a href="https://kuivalainen.bandcamp.com/">music</a>
               </li>
               <li>
-                <Link to="/godlike" onClick={this.clicked}>About us</Link>
+                <Link to={NAVLINK[2]} 
+                className={this.light(NAVLINK[2])}
+                onClick={this.clicked}>About us</Link>
               </li>
             </ul>
           </nav>

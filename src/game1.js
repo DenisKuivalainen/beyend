@@ -6,7 +6,7 @@ class Game1 extends React.Component {
     render() {
         return (
             <div>
-                <img src={logo} alt="Logo" class="pict"/>
+                {/* <img src={logo} alt="Logo" class="pict"/> */}
             </div>
             
         )
