@@ -1,12 +1,13 @@
   
 import React from 'react';
-// import logo from './media/ascention.png';
+import logo from './media/ascention.png';
+import './game1.css';
 
 class Game1 extends React.Component {
     render() {
         return (
-            <div>
-                {/* <img src={logo} alt="Logo" class="pict"/> */}
+            <div class="game1">
+                <img src={logo} alt="Logo" class="pict"/>
             </div>
             
         )

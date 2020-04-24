@@ -17,7 +17,7 @@ export default function Strip(props) {
         yvar = yvar + hvar + dvar
     }
 
-    return (<svg  width={wvar} height={wvar} version="1.1">
+    return (<svg  class={props.class} width={wvar} height={wvar} version="1.1">
         {arr.map((c) => (
         <rect x={c.x} y={c.y} width={c.w} height={c.h}/>
         ))}
