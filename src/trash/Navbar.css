@@ -14,25 +14,27 @@
 }
 
 @font-face {
+    font-family: Beyond;
+    src: url(media/Beyond.ttf);
+   }
+
+@font-face {
     font-family: Pixel;
     src: url(media/Pixel.ttf);
-}
+   }
 
-.navbar nav{
-    /* top: 0;
-    left: 0; */
+nav{
     background: var(--color-back);
     height: 80px;
     z-index: 100;
 }
 
-.navbar nav ul{
+nav ul{
     display: inline;
 }
 
 .navbars{
     z-index: 100;
-    margin: 0;
 }
 
 .navoptions{
@@ -52,9 +54,9 @@
     height: 80px;
 }
 
-.navbar nav ul li{
+nav ul li{
     display: inline-block;
-    line-height: 77px;
+    line-height: 80px;
     margin: 0 5px;
 }
 
@@ -95,18 +97,18 @@ ul li a:hover{
 }
 
 .checkbtn{
-    height: 32px;
+    height: 40px;
     fill: var(--color-passive);
     float: right;
-    margin-right: 32px;
+    margin-right: 40px;
     margin-top: 24px;
     cursor: pointer;
     display: none;
 }
 
 .menubtn{
-    height: 32px;
-    width: 32px;
+    height: 40px;
+    width: 40px;
     fill: var(--color-passive);
     transition: 0.5s;
 }
