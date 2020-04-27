@@ -18,12 +18,16 @@
     src: url(media/Pixel.ttf);
 }
 
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-back);
+    z-index: 100;
+}
+
 .navbar nav{
-    /* top: 0;
-    left: 0; */
     background: var(--color-back);
     height: 80px;
-    z-index: 100;
 }
 
 .navbar nav ul{
@@ -137,8 +141,11 @@ ul li a:hover{
     .navmedia{
         top: 340px;
     }
-    nav ul li{
+    .navbar nav ul{
         display: block;
+    }
+    .navoptions li{
+        display: block !important;
     }
     .navmedia li{
         display: inline !important;

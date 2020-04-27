@@ -4,23 +4,40 @@
     background-color: black;
 }
 
+.start_view{
+    min-height: 100vh;
+}
+
+.text_hide{
+    opacity: 0;
+    transition: 1s;
+}
+
+.text_reveal{
+    opacity: 100;
+    transition: 2s;
+}
+
 .div_logo{
-    height: 100vh;
+    height: calc(40vh + 80px);
     position: relative;
 }
 
 .a_logo{
-    width: 100%;
     position: absolute;
-    top: 50%;
+    top: 100%;
+    width: 100%;
     transform: translate(0, -50%);
 }
 
+.div_intro{
+    margin: 15vw 0;
+}
 .a_intro{
     font-family: Pixel;
     color: #ffffff;
     font-size: 20px;
-    text-align: center
+    text-align: center;
 }
 
 .slide{
@@ -52,6 +69,26 @@
     height: 100%;
 }
 
+.decrease_size{
+    width: 100% !important;
+}
 .carousel-initialized{
     margin-right: 0 !important;
+    width: 100%;
+}
+
+@media (max-width:500px){
+    .a_intro{
+        font-size: 10px;
+    }
+    .slide{
+        width: 80vw !important;
+        margin: 0 10vw !important;
+    }
+}
+
+@media (min-width:1800px){
+    .a_intro{
+        font-size: 30px;
+    }
 }
