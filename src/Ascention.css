@@ -4,6 +4,37 @@
     background-color: black;
 }
 
+.layer1, .layer2, .layer3, .layer4 {
+    position: relative;
+}
+
+.layer1{
+    z-index: 50;
+}
+.layer2{
+    z-index: 40;
+}
+.layer3{
+    z-index: 30;
+}
+
+.layer4{
+    z-index: 20;
+}
+
+.layer5{
+    z-index: 10;
+}
+
+.bg_img{
+    width: 100%;
+}
+
+.yx{
+    position: fixed;
+    bottom: 0;
+}
+
 .start_view{
     min-height: 100vh;
 }
