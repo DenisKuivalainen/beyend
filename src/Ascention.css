@@ -28,11 +28,15 @@
 
 .bg_img{
     width: 100%;
+    position: fixed;
 }
 
 .yx{
-    position: fixed;
-    bottom: 0;
+    bottom: 0 !important;
+}
+
+.xy{
+    transition: 0.05s;
 }
 
 .start_view{
@@ -122,4 +126,8 @@
     .a_intro{
         font-size: 30px;
     }
+}
+
+.custom_margin{
+    margin-bottom: 50vw;
 }

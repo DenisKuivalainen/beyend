@@ -56,12 +56,13 @@ class LogoStart extends React.Component{
                         <img class="a_logo" src="http://192.168.1.100:3000/ascention/logo.png" alt="BEYOND ASCENTION" />
                     </div>  
                     <div class={"div_intro " + this.textHideOrReveal()}>
+        <p class="a_intro">{this.props.textt}</p>
                         <p class="a_intro">
                             {this.state.xxx} Custom scrollbars are getting popular, and you might have come across websites that have unique scrollbars, making the sites feel and look different. There are basically a few ways to implement a custom scrollbar. In this tutorial we will be using CSS3, which is the most straightforward way. However, there are jQuery plugins that can help with customizing scrollbar, but I do not like to add more JavaScript to my website.
                         </p>
                     </div>
                 </div>
-                <div class={this.textHideOrReveal()}>
+                <div class={"custom_margin " + this.textHideOrReveal()}>
                     <CustomSlider style={this.proportions()} />
                 </div>
             </div>
