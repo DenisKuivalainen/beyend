@@ -11,32 +11,32 @@ class CustomSlider extends Component {
         initialSlide: 0
     };
     return (
-        <Slider class={"container " + this.props.style} { ...settings }>
-            <div class={"container " + this.props.style}>
+        <Slider class="container " { ...settings }>
+            <div class="container ">
                 <div class="container__wrapper">
                     <div class="container__content">
-                    <iframe class="scroll" width="399" height="399" src="https://www.youtube.com/embed/_xKCwzgI68s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="scroll" title="game video" width="399" height="399" src="https://www.youtube.com/embed/_xKCwzgI68s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-            <div class={"container " + this.props.style}>
+            <div class="container ">
                 <div class="container__wrapper">
                     <div class="container__content">
-                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" />
+                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" alt="first img" />
                     </div>
                 </div>
             </div>
-            <div class={"container " + this.props.style}>
+            <div class="container ">
                 <div class="container__wrapper">
                     <div class="container__content">
-                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" />
+                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" alt="first img" />
                     </div>
                 </div>
             </div>
-            <div class={"container " + this.props.style}>
+            <div class="container ">
                 <div class="container__wrapper">
                     <div class="container__content">
-                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" />
+                        <img class="scroll" src="https://funart.pro/uploads/posts/2020-01/1580130510_51-p-sialii-zhivotnie-113.jpg" alt="first img" />
                     </div>
                 </div>
             </div>

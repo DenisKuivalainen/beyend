@@ -17,11 +17,9 @@
 .layer3{
     z-index: 30;
 }
-
 .layer4{
     z-index: 20;
 }
-
 .layer5{
     z-index: 10;
 }
@@ -31,17 +29,34 @@
     position: fixed;
 }
 
-.yx{
-    bottom: 0 !important;
+.bg_move{
+    position: relative;
+    background: black url(http://192.168.1.100:3000/ascention/clouds_full.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    height: calc(100vw * 1552/1500);
+    animation: clouds 30s linear infinite;
 }
 
-.xy{
-    transition: 0.05s;
+@keyframes clouds {
+    from { background-position: 0 0;}
+    to { background-position: 100vw 0; }
 }
 
-.start_view{
+.l1_img{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.l2_img{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+/* .start_view{
     min-height: 100vh;
-}
+} */
 
 .text_hide{
     opacity: 0;
@@ -66,8 +81,10 @@
 }
 
 .div_intro{
-    margin: 15vw 0;
+    margin-top: calc(10vw + 30px);
+    margin-bottom: 50px;
 }
+
 .a_intro{
     font-family: Pixel;
     color: #ffffff;
@@ -107,6 +124,7 @@
 .decrease_size{
     width: 100% !important;
 }
+
 .carousel-initialized{
     margin-right: 0 !important;
     width: 100%;
@@ -120,14 +138,29 @@
         width: 80vw !important;
         margin: 0 10vw !important;
     }
+    .div_intro{
+        margin-top: calc(13vw + 30px);
+    }
 }
 
-@media (min-width:1800px){
+@media (min-width:1100px){
+    .a_intro{
+        font-size: 25px;
+    }
+}
+
+@media (min-width:1500px){
     .a_intro{
         font-size: 30px;
     }
 }
 
-.custom_margin{
-    margin-bottom: 50vw;
+@media (min-width:1800px){
+    .a_intro{
+        font-size: 35px;
+    }
+}
+
+.custom_div{
+    height: 110vw;
 }
