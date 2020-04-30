@@ -6,7 +6,8 @@ import {
     Link
 } from "react-router-dom";
 
-import Ascention from "./Ascention";
+import Ascention from "./Ascention"
+import Godlike from "./Godlike"
 import Strip from './svgStrip'
 
 import './Navbar.css'
@@ -93,13 +94,13 @@ class Webapp extends React.Component {
                 </div>
                 <div>
                     <Switch>
-                        <Route path={NAVLINK[0]}>
-                            <Ascention />
+                        <Route path={NAVLINK[2]}>
+                            <Godlike />
                         </Route>
                         <Route path={NAVLINK[1]}>
                             <Ascention />
                         </Route>
-                        <Route path={NAVLINK[2]}>
+                        <Route path={NAVLINK[0]}>
                             <Ascention />
                         </Route>
                     </Switch>

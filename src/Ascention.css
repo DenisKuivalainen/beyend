@@ -43,15 +43,9 @@
     to { background-position: 100vw 0; }
 }
 
-.l1_img{
+.l_img{
     width: 100%;
     position: fixed;
-    bottom: 0;
-}
-.l2_img{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
 }
 
 /* .start_view{
