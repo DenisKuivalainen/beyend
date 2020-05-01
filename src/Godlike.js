@@ -1,9 +1,11 @@
 import React from 'react'
 
+import './Godlike.css'
+
 class Godlike extends React.Component {
     render() {
         return(
-            <div>
+            <div class="from_top_godlike">
                 <p>hello</p>
             </div>
         )

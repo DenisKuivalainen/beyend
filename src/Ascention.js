@@ -10,18 +10,16 @@ class Ascention extends React.Component {
         this.state = {
             proportions: true, //horizontal - true, vertical - false
             fromTop: 0,
-            fromTopClouds: 0,
             fromBottom: -10000,
             w: 0,
             vh: 0,
         }
-        this.screenParam = this.screenParam.bind(this)
+        this.screenParam=this.screenParam.bind(this)
     }
 
-    // componentWillMount() {
-    //     this.screenParam();
-    //     this.calculateParallax();
-    // }
+    componentWillMount() {
+        this.screenParam()
+    }
 
     componentDidMount() {
         window.addEventListener('resize', this.screenParam);
@@ -39,7 +37,7 @@ class Ascention extends React.Component {
         window.removeEventListener('scroll', this.calculateParallax);
     }
 
-    screenParam = () =>{
+    screenParam(){
         //to check proportions
         let xxx =  document.documentElement.clientWidth
         let yyy = document.documentElement.clientHeight
@@ -80,13 +78,11 @@ class Ascention extends React.Component {
         let clouds = w - w*1552/1500
         //calculating layers parallax
         let y = vh-h+s
+        console.log(clouds)
         this.setState({
             fromTop: x,
-            fromTopClouds: clouds,
             fromBottom: y,
-            s: s
         })
-        console.log("w=" + w +" h=" + h +" vh=" + vh +" s=" + s)
     }
 
     topChecker(excess) {
@@ -101,6 +97,8 @@ class Ascention extends React.Component {
     }
 
     render() {
+        if(this.state.w === 0) {this.screenParam(); this.calculateParallax()}
+        
         return (
             <div class="bg">
                 <div class="layer1">
@@ -118,7 +116,7 @@ class Ascention extends React.Component {
                     <img class="bg_img" style={this.topChecker(0)} src="http://192.168.1.100:3000/ascention/bg.png" alt="bg" />
                 </div>
                 <div class="layer5">
-                    <div class="bg_img" style={this.topChecker(this.state.fromTopClouds)}>
+                    <div class="bg_img" style={this.topChecker(this.state.w*(1-1552/1500))}>
                         <div class="bg_move" />
                     </div>
                 </div>
