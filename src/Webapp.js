@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Suspense, lazy} from "react";
 import {
     BrowserRouter as Router,
     Switch,
@@ -6,11 +6,12 @@ import {
     Link
 } from "react-router-dom";
 
-import Ascention from "./Ascention"
-import Godlike from "./Godlike"
 import Strip from './svgStrip'
 
 import './Navbar.css'
+
+const GODLIKE = lazy(() => import('./Godlike'))
+const ASCENTION = lazy(() => import('./Ascention'))
 
 const NAVLINK = ["/", "/ascention", "/godlike"]
 
@@ -93,17 +94,13 @@ class Webapp extends React.Component {
                     </nav>
                 </div>
                 <div>
-                    <Switch>
-                        <Route path={NAVLINK[2]}>
-                            <Godlike />
-                        </Route>
-                        <Route path={NAVLINK[1]}>
-                            <Ascention />
-                        </Route>
-                        <Route path={NAVLINK[0]}>
-                            <Ascention />
-                        </Route>
-                    </Switch>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Switch>
+                            <Route path={NAVLINK[2]} component={GODLIKE} />
+                            <Route path={NAVLINK[1]} component={ASCENTION} />
+                            <Route path={NAVLINK[0]} component={ASCENTION} />
+                        </Switch>
+                    </Suspense>
                 </div>
             </Router>
         )

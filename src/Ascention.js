@@ -74,11 +74,8 @@ class Ascention extends React.Component {
         //Smax = w - hv
         let x = (s*(vh-w))/(h-vh)
         if(s < 1 || !this.state.proportions) {x = 0}
-        //calculating clouds excess
-        let clouds = w - w*1552/1500
         //calculating layers parallax
         let y = vh-h+s
-        console.log(clouds)
         this.setState({
             fromTop: x,
             fromBottom: y,
