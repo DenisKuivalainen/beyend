@@ -1,13 +1,45 @@
+.g_bg{
+	width: 100%;
+	min-height: calc(100vh - 80px);
+    height: 100%;
+	background-color: black;
+}
+
 .g_top{
-    top: 80px;
-	position: fixed;
+    margin-top: 80px;
+	position: relative;
 	width: 100%;
 }
 
-.row_mrg{
+.g_mrg{
 	margin-top: 3vw;
+	width: 100% !important;
 }
 
 .g_img{
 	width: 100%;
+}
+
+.g_txt_cap{
+	font-family: Pixel;
+	color: white;
+	font-size: 3vw;
+}
+
+.g_txt_sml{
+	font-family: Pixel;
+	color: white;
+	font-size: 1.5vw;
+}
+
+.g_btm{
+	margin-bottom: 50px;
+}
+
+.g_txt_btm{
+	font-family: Pixel;
+	color: white;
+	font-size: 1vw;
+	bottom: 0;
+	text-align: center;
 }

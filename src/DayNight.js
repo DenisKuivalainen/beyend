@@ -6,8 +6,8 @@ const DayNight = (props) => {
     let dayTime = Math.round(today.getHours()/6) - 1
 
     let eType = picts[dayTime].type
-    let eProps = picts[dayTime].props
-    
+    let eProps = Object.assign({}, picts[dayTime].props, {class: "g_img"})
+
     return(
         React.createElement(eType, eProps)  
     )
