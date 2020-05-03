@@ -12,8 +12,9 @@ import './Navbar.css'
 
 const GODLIKE = lazy(() => import('./Godlike'))
 const ASCENTION = lazy(() => import('./Ascention'))
+const PERSECUTION = lazy(() => import('./Persecution'))
 
-const NAVLINK = ["/", "/ascention", "/godlike"]
+const NAVLINK = ["/", "/ascention", "/godlike", "/persecution"]
 
 class Webapp extends React.Component {
     constructor (props) {
@@ -96,6 +97,7 @@ class Webapp extends React.Component {
                 <div>
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
+                            <Route path={NAVLINK[3]} component={PERSECUTION} />
                             <Route path={NAVLINK[2]} component={GODLIKE} />
                             <Route path={NAVLINK[1]} component={ASCENTION} />
                             <Route path={NAVLINK[0]} component={ASCENTION} />
