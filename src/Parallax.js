@@ -29,14 +29,12 @@ class Parallax extends React.Component {
             picArr: picts,
             picOrder: order
         })  
-        console.log(picts)      
-        console.log(order)
     }
 
     classSet(order) {
-        if (order = '0'){return("l_img")} //картинки внизу
-        if (order = '1'){return('bg_img')} //фон
-        if (order = '2'){return('bg_img')} //Облака
+        if (order === '0'){return("l_img")} //картинки внизу
+        if (order === '1'){return('bg_img')} //фон
+        if (order === '2'){return('bg_img')} //Облака
     }
 
     styleSet(oId, index) {
