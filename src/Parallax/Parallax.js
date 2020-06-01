@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './Ascention.css'
+import './GamePage.css'
 
 class Parallax extends React.Component {
     constructor(props) {
@@ -38,13 +38,11 @@ class Parallax extends React.Component {
     }
 
     styleSet(oId, index) {
-        let z = 50 - index
+        let z = 40 - index
         let x = parseFloat(this.state.picArr[index].props.id)
         if(oId==="0"){return(this.bottomChecker(x, z))}
         if(oId==="1"){return(this.topChecker(x, z))}
-
-
-        // return({zIndex: {z}})
+        if(oId==="2"){return(this.topChecker(1 - x, z))}
     }
 
     componentWillMount() {
@@ -114,7 +112,7 @@ class Parallax extends React.Component {
     }
 
     topChecker(excess, z) {
-        let ex = excess + this.state.fromTop
+        let ex = excess * this.state.w + this.state.fromTop
         if(this.state.proportions){ return({top: ex, zIndex: z})}
         else { return({bottom: 0, zIndex: z})}
     }
@@ -128,19 +126,51 @@ class Parallax extends React.Component {
         return(
             <div class="layer">
                 {
-                    this.state.picOrder.map((oId, index)=> 
-                        <img 
-                            class={this.classSet(oId)} 
-                            style={this.styleSet(oId, index)}
-                            id={oId}
-                            key={index}
-                            src={this.state.picArr[index].props.src}
-                            alt={this.state.picArr[index].props.alt}
-                        />
+                    this.state.picOrder.map((oId, index)=> {
+                            return oId !== "2" ?
+                                this.imgGen(oId, index)
+                            :
+                                this.divGen(oId, index)
+                        }
+                    
                     )
                 }
             </div>
         )
+    }
+
+    imgGen(oId, index) {
+        return(
+            <img 
+                class={this.classSet(oId)} 
+                style={this.styleSet(oId, index)}
+                id={oId}
+                key={index}
+                src={this.state.picArr[index].props.src}
+                alt={this.state.picArr[index].props.alt}
+            />
+        )
+    }
+
+    divGen(oId, index) {
+        return(
+            <div
+                class={this.classSet(oId)}
+                style={this.styleSet(oId, index)}
+                id={oId}
+                key={index}
+            >
+                <div style={this.divStyle(index)} class="bg_move" />
+            </div>
+        )
+    }
+
+    divStyle(index) {
+        let h = this.state.picArr[index].props.id * this.state.w
+        return({
+            backgroundImage: "url(" + this.state.picArr[index].props.src + ")",
+            height: h
+        })
     }
 }
 

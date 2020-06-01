@@ -44,7 +44,7 @@ class LogoStart extends React.Component{
             <div>
                 <div class="start_view">
                     <div class="div_logo">
-                        <img class="a_logo" src="http://192.168.1.100:3000/ascention/logo.png" alt="BEYOND ASCENTION" />
+                        <img class="a_logo" src={this.props.imgSrc} alt={this.props.imgAlt} />
                     </div>  
                     <div class={"div_intro " + this.textHideOrReveal()}>
                         <p class="a_intro">

@@ -46,10 +46,6 @@
     position: fixed;
 }
 
-/* .start_view{
-    min-height: 100vh;
-} */
-
 .text_hide{
     opacity: 0;
     transition: 1s;
